@@ -16,6 +16,8 @@ router.get('/', (req, res, next) =>{
 		});
 });
 
+
+
 router.post('/', (req, res, next) =>{
 	const user = new User({
 		_id: new mongoose.Types.ObjectId(),
@@ -34,7 +36,7 @@ router.post('/', (req, res, next) =>{
 		userCreated: user
 	});
 });
-//
+
 router.get('/:userId', (req, res, next) =>{
 	const id = req.params.userId;
 		User.findById(id)

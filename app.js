@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const userRoutes = require('./api/routes/users');
+const loggRoutes = require('./api/routes/loggs');
 
 
 mongoose.connect('mongodb+srv://EiT:'+ 
@@ -26,8 +27,9 @@ app.use((req, res, next) => {
 	}
 	next();
 });
-
+app.use('/loggs', loggRoutes);
 app.use('/users', userRoutes);
+
 
 app.use((req, res, next) =>{
 	const error = new Error('Not found');
