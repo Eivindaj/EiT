@@ -97,7 +97,7 @@ router.get('/:userId/:days', (req, res, next) =>{
 
 router.post('/', (req, res, next) =>{
     const dateStr = Date.now();
-    console.log(dateStr);
+    console.log(req.body.id)
 	const logg = new Logg({
         _id: new mongoose.Types.ObjectId(),
 		userid: req.body.id,
