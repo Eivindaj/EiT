@@ -4,7 +4,7 @@
 void setup() {
  
   Serial.begin(115200);                 //Serial connection
-  WiFi.begin("Traalll", "tresprit");   //WiFi connection
+  WiFi.begin("SSID", "Password");   //WiFi connection
  
   while (WiFi.status() != WL_CONNECTED) {  //Wait for the WiFI connection completion
  
